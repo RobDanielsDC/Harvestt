@@ -19,9 +19,84 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <script src="/js/site.js"></script>
   </head>
   <body>
     <header class="header">
+      <div class="desktop-logobar">
+        <img
+          src="img/desktopLogoHarvestt.svg"
+          alt="Harvestt"
+          class="desktop-logobarHarvestt logoLeftOut"
+        />
+        <img
+          src="img/desktoplogoIcon.svg"
+          alt="HarvesttIcon"
+          class="desktop-logobarIcon"
+        />
+        <img
+          src="img/desktopLogoStudio.png"
+          alt="Studio"
+          class="desktop-logobarStudio logoRightOut"
+        />
+      </div>
+      <div class="desktop-bannerbar">
+        <span class="desktop-bannerbarText">Branding</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Marketing</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Web Design</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Branding</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Marketing</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Web Design</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Branding</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Marketing</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Web Design</span>
+        <img
+          src="img/desktopBannerbarIcon.svg"
+          alt="Icon"
+          class="desktop-bannerbarIcon"
+        />
+        <span class="desktop-bannerbarText">Branding</span>
+      </div>
       <div class="banner">
         <span class="banner-text">Branding</span>
         <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
@@ -35,20 +110,48 @@
           src="img/mobileLogo.svg"
           alt="Harvestt Network Logo"
         />
-        <img src="img/mobileHeaderIconBar.svg" alt="decorative bar" />
+        <img
+          class="hero-decobar"
+          src="img/mobileHeaderIconBar.svg"
+          alt="decorative bar"
+        />
         <div class="hero-text">
-          <p class="hero-maintext">
-            We’re a design & technology partner who cultivates your digital
-            presence from the ground up
-          </p>
-          <p class="hero-bookingtext">→ Now Booking projects for 2024</p>
+          <img
+            class="desktop-sunray"
+            src="img/desktopSunrayIcon.svg"
+            alt="Sunray Icon"
+          />
+          <div class="hero-textflex">
+            <p class="hero-maintext">
+              We’re a design & technology partner who cultivates your digital
+              presence from the ground up
+            </p>
+            <p class="hero-bookingtext">→ Now Booking projects for 2024</p>
+          </div>
         </div>
-        <img src="img/mobileHeaderIconBar.svg" alt="decorative bar" />
+        <img
+          class="hero-decobar"
+          src="img/mobileHeaderIconBar.svg"
+          alt="decorative bar"
+        />
         <div class="hero-ctas">
           <a href="https://x.com/robably__" class="hero-social">
             <img src="img/TwitterX.svg" alt="Twitter Icon" />
           </a>
-          <a href="#" class="hero-button"><span>Say Hello</span></a>
+          <a href="#" class="hero-button"
+            ><svg
+              class="arrow-icon"
+              width="12"
+              height="11"
+              viewBox="0 0 12 11"
+              fill="#0e170b"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.2846 4.76399L5.5946 1.09199L6.5486 0.0839848L11.7326 5.26799L6.5486 10.452L5.5766 9.42599L9.2846 5.75399L7.4666 6.02399L0.284601 6.02398L0.266601 4.49399L7.4666 4.49399L9.2846 4.76399Z"
+              /></svg
+            ><span>Say Hello</span>
+          </a>
           <a href="https://instagram.com/" class="hero-social">
             <img src="img/Instagram.svg" alt="Instagram Icon" />
           </a>
@@ -61,7 +164,7 @@
           <div class="badge">Featured</div>
           <img
             class="featured-cardImg"
-            src="img/PhoneForest.png"
+            src="img/featured-laptop.png"
             alt="Hand with phone in the forest"
           />
           <h1>Bee Friendly Farm</h1>
@@ -122,6 +225,16 @@
             </div>
           </div>
         </article>
+        <article class="desktop-iconCopy">
+          <img src="img/LineIconLineSm.png" alt="decorative line" />
+          <p class="iconCopy-text">
+            We partner with businesses committed to sustainability. Those who
+            strive to build a world where we coexist with nature.
+          </p>
+          <img src="img/LineIconLineSm.png" alt="decorative line" />
+        </article>
+      </section>
+      <section class="feels">
         <article class="feels">
           <div class="feels-gallery">
             <img
@@ -168,6 +281,8 @@
             />
           </div>
         </article>
+      </section>
+      <section class="featured">
         <article class="featured">
           <img
             class="featured-cardImg"
@@ -230,19 +345,105 @@
       <div class="bottom-cta">
         <img
           class="bottomcta-graphic"
-          src="img/SolarPhase.png"
+          src="img/SolarPhase.svg"
           alt="Solar phases"
         />
         <p class="bottomcta">
-          Have a project in mind? Feel free to reach out anytime.
+          Have a project in mind? Feel free to reach<span
+            class="desktop-break"
+          ></span>
+          out anytime.
         </p>
-        <a href="#" class="hero-button">Let's Chat</a>
+        <a href="#" class="hero-button chatButton">Let's Chat</a>
       </div>
       <img
         class="hero-logo"
         src="img/mobileLogo.svg"
         alt="Harvestt Network Logo"
       />
+      <div class="desktop-logobar">
+        <img
+          src="img/desktopLogoHarvestt.svg"
+          alt="Harvestt"
+          class="desktop-logobarHarvestt logoLeftIn"
+        />
+        <img
+          src="img/desktoplogoIcon.svg"
+          alt="HarvesttIcon"
+          class="desktop-logobarIcon"
+        />
+        <img
+          src="img/desktopLogoStudio.png"
+          alt="Studio"
+          class="desktop-logobarStudio logoRightIn"
+        />
+      </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
+    <script>
+      function getFeelsGalleryDistance() {
+        if (window.innerWidth > 768) {
+          return 100;
+        } else {
+          return 30;
+        }
+      }
+      gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+      const articles = gsap.utils.toArray("article.featured");
+      articles.forEach((article, index) => {
+        gsap.from(article, {
+          scrollTrigger: {
+            trigger: article,
+            start: "top 99%",
+            end: "bottom 85%",
+            scrub: true,
+          },
+          y: 50,
+          duration: 1,
+        });
+      });
+
+      const feelsGallery = gsap.utils.toArray(".feels-gallery");
+      feelsGallery.forEach((gallery, index) => {
+        gsap.to(gallery, {
+          x: (index % 2 === 0 ? 1 : -1) * getFeelsGalleryDistance(),
+          scrollTrigger: {
+            trigger: gallery,
+            start: "top 99%",
+            end: "bottom 20%",
+            scrub: true,
+          },
+        });
+      });
+
+      const feelsText = document.querySelector(".feels-text");
+      gsap.from(feelsText, {
+        scrollTrigger: {
+          trigger: feelsText,
+          start: "top 85%",
+          end: "bottom 70%",
+          toggleActions: "restart none none reverse",
+        },
+        ease: "power1.out",
+        opacity: 0,
+        duration: 1.5,
+      });
+
+      const chatButton = document.querySelector(".chatButton");
+      gsap.from(chatButton, {
+        scrollTrigger: {
+          trigger: chatButton,
+          start: "top 85%",
+          toggleActions: "restart none none reverse",
+        },
+        ease: "power1.out",
+        opacity: 0,
+        duration: 0.2,
+      });
+    </script>
   </body>
 </html>
