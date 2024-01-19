@@ -498,18 +498,45 @@
         duration: 1,
       });
 
+      function getFeaturedArticleRandomYMovement(format) {
+        if (format === "desktop") {
+          return -(Math.random() * 20 + 3);
+        } else if (format === "mobile") {
+          return -(Math.random() * 4 + 3);
+        }
+      }
+
       const articles = gsap.utils.toArray("article.featured");
-      articles.forEach((article, index) => {
-        gsap.from(article, {
-          scrollTrigger: {
-            trigger: article,
-            start: "top 99%",
-            end: "bottom 85%",
-            scrub: true,
-          },
-          y: 50,
-          duration: 1,
-        });
+
+      ScrollTrigger.matchMedia({
+        "(min-width: 768px)": function () {
+          articles.forEach((article, index) => {
+            gsap.to(article, {
+              scrollTrigger: {
+                trigger: article,
+                start: "top 90%",
+                end: "bottom 85%",
+                scrub: true,
+              },
+              yPercent: getFeaturedArticleRandomYMovement("desktop"),
+              duration: 1,
+            });
+          });
+        },
+        "(max-width: 767px)": function () {
+          articles.forEach((article, index) => {
+            gsap.to(article, {
+              scrollTrigger: {
+                trigger: article,
+                start: "top 90%",
+                end: "bottom 85%",
+                scrub: true,
+              },
+              yPercent: getFeaturedArticleRandomYMovement("mobile"),
+              duration: 1,
+            });
+          });
+        },
       });
 
       const feelsGallery = gsap.utils.toArray(".feels-gallery");
