@@ -41,61 +41,118 @@
         />
       </div>
       <div class="desktop-bannerbar">
-        <span class="desktop-bannerbarText">Branding</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Marketing</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Web Design</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Branding</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Marketing</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Web Design</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Branding</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Marketing</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Web Design</span>
-        <img
-          src="img/desktopBannerbarIcon.svg"
-          alt="Icon"
-          class="desktop-bannerbarIcon"
-        />
-        <span class="desktop-bannerbarText">Branding</span>
+        <div class="desktop-bannerbarMarquee">
+          <span class="desktop-bannerbarText">Branding</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Marketing</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Web Design</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Branding</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Marketing</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Web Design</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Branding</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Marketing</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Web Design</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+        </div>
+        <div class="desktop-bannerbarMarquee">
+          <span class="desktop-bannerbarText">Branding</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Marketing</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Web Design</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Branding</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Marketing</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Web Design</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Branding</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Marketing</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+          <span class="desktop-bannerbarText">Web Design</span>
+          <img
+            src="img/desktopBannerbarIcon.svg"
+            alt="Icon"
+            class="desktop-bannerbarIcon"
+          />
+        </div>
       </div>
       <div class="banner">
         <span class="banner-text">Branding</span>
@@ -391,7 +448,55 @@
           return 30;
         }
       }
+
       gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+      const logoHarvestt = document.querySelector(".logoLeftOut");
+      const logoHarvesttLeftDistance = -(
+        logoHarvestt.getBoundingClientRect().width + 100
+      );
+      const logoStudio = document.querySelector(".logoRightOut");
+      const logoStudioRightDistance =
+        logoStudio.getBoundingClientRect().width + 100;
+      const logoIcon = document.querySelector(".desktop-logobarIcon");
+      const logobarTrigger = document.querySelector(".desktop-logobar");
+
+      gsap.to(logoHarvestt, {
+        scrollTrigger: {
+          trigger: logobarTrigger,
+          start: "top 1%",
+          end: "bottom 1%",
+          scrub: true,
+        },
+        x: logoHarvesttLeftDistance,
+        opacity: 0,
+        duration: 1,
+      });
+
+      gsap.to(logoStudio, {
+        scrollTrigger: {
+          trigger: logobarTrigger,
+          start: "top 1%",
+          end: "bottom 1%",
+          scrub: true,
+        },
+        x: logoStudioRightDistance,
+        opacity: 0,
+        duration: 1,
+      });
+
+      /* rotate icon and fade out */
+      gsap.to(logoIcon, {
+        scrollTrigger: {
+          trigger: logobarTrigger,
+          start: "top 1%",
+          end: "bottom 1%",
+          scrub: true,
+        },
+        rotation: 180,
+        opacity: 0,
+        duration: 1,
+      });
 
       const articles = gsap.utils.toArray("article.featured");
       articles.forEach((article, index) => {

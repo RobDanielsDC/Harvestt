@@ -431,20 +431,34 @@ article.desktop-iconCopy {
     font-weight: 400;
     line-height: 20px;
     color: var(--cream);
+    padding-left: 29px;
   }
+
+  .desktop-bannerbarIcon {
+    padding-left: 29px;
+  }
+
   .desktop-bannerbar {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    align-items: center;
+    padding: 20px 0;
+    margin: 28px 0 0 0;
+    min-width: 100%;
+    border-top: 2px solid var(--cream);
+    border-bottom: 2px solid var(--cream);
+  }
+
+  .desktop-bannerbarMarquee {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
     white-space: nowrap;
-    /* animation: slide-left 20s linear infinite; */
+    animation: slide-left 35s linear infinite;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    margin: 28px auto 0 auto;
-    width: 100%;
-    border-top: 2px solid var(--cream);
-    border-bottom: 2px solid var(--cream);
+    min-width: 100%;
   }
 
   @keyframes slide-left {
@@ -506,7 +520,7 @@ article.desktop-iconCopy {
   }
 
   .hero-ctas {
-    margin-top: 215px;
+    margin-top: 170px;
   }
 
   .main-lift {
