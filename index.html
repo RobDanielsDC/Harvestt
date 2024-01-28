@@ -19,7 +19,6 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <script src="/js/site.js"></script>
   </head>
   <body>
     <header class="header">
@@ -161,7 +160,7 @@
         <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
         <span class="banner-text">Marketing</span>
       </div>
-      <section class="hero">
+      <section id="fly-container" class="hero">
         <img
           class="hero-logo"
           src="img/mobileLogo.svg"
@@ -575,6 +574,78 @@
         ease: "power1.out",
         opacity: 0,
         duration: 0.2,
+      });
+
+      let flyContainer = document.getElementById("fly-container");
+      let flyContainerWidth = flyContainer.clientWidth;
+      let flyContainerHeight = flyContainer.clientHeight;
+
+      function createFirefly() {
+        const firefly = document.createElement("div");
+        firefly.classList.add("firefly");
+        randomX = Math.random() * flyContainerWidth;
+        randomY = Math.random() * flyContainerHeight;
+
+        firefly.style.left = randomX + "px";
+        firefly.style.top = randomY + "px";
+        flyContainer.appendChild(firefly);
+        animateFirefly(firefly, flyContainer);
+      }
+
+      function animateFirefly(firefly, container) {
+        let posX =
+          Math.random() * (container.offsetWidth - firefly.offsetWidth);
+        let posY =
+          Math.random() * (container.offsetHeight - firefly.offsetHeight);
+        let velocityX = (Math.random() - 0.5) * 2;
+        let velocityY = (Math.random() - 0.5) * 2;
+
+        function move() {
+          // Update position
+          posX += velocityX;
+          posY += velocityY;
+
+          // Bounce off edges
+          if (
+            posX <= 0 ||
+            posX >= container.offsetWidth - firefly.offsetWidth
+          ) {
+            velocityX *= -1;
+          }
+          if (
+            posY <= 0 ||
+            posY >= container.offsetHeight - firefly.offsetHeight
+          ) {
+            velocityY *= -1;
+          }
+
+          firefly.style.left = `${posX}px`;
+          firefly.style.top = `${posY}px`;
+
+          velocityX += (Math.random() - 0.5) / 5;
+          velocityY += (Math.random() - 0.5) / 5;
+
+          const maxVelocity = 1.0;
+          velocityX = Math.max(Math.min(velocityX, maxVelocity), -maxVelocity);
+          velocityY = Math.max(Math.min(velocityY, maxVelocity), -maxVelocity);
+
+          firefly.style.opacity = 0.5 + Math.random() * 0.5;
+
+          requestAnimationFrame(move);
+        }
+
+        move();
+      }
+
+      const resetFireflies = () => {
+        let fireFlies = document.querySelectorAll("div.firefly");
+        fireFlies.forEach((fly) => animateFirefly(fly, flyContainer));
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        for (let i = 0; i < 5; i++) {
+          createFirefly();
+        }
       });
     </script>
   </body>

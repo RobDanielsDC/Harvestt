@@ -523,6 +523,17 @@ article.desktop-iconCopy {
     margin-top: 170px;
   }
 
+  .firefly {
+    position: absolute;
+    width: 2px;
+    height: 1px;
+    border-radius: 50%;
+    content: "";
+    background-color: var(--yellow);
+    box-shadow: 2px 2px 20px 5px var(--yellow);
+    opacity: 0.8;
+  }
+
   .main-lift {
     position: relative;
     margin-top: -10px;
