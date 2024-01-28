@@ -643,8 +643,11 @@
       };
 
       document.addEventListener("DOMContentLoaded", () => {
-        for (let i = 0; i < 5; i++) {
-          createFirefly();
+        let numFireflies = 5;
+        if (window.innerWidth > 1024) {
+          for (let i = 0; i < 5; i++) {
+            createFirefly();
+          }
         }
       });
     </script>
