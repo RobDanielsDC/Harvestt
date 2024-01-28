@@ -652,25 +652,19 @@
         .querySelectorAll(".feels-gallery .feels-image")
         .forEach((img, index, arr) => {
           img.addEventListener("mouseenter", () => {
-            // Scale up the hovered image in CSS
             img.style.transform = "scale(1.1)";
 
-            // Scale the previous and next images, if they exist
-            if (index > 0) {
-              // Check if there's a previous image
+            if (index > 0 && index !== 5) {
               arr[index - 1].classList.add("adjacent-scale");
             }
-            if (index < arr.length - 1) {
-              // Check if there's a next image
+            if (index < arr.length - 1 && index !== 4) {
               arr[index + 1].classList.add("adjacent-scale");
             }
           });
 
           img.addEventListener("mouseleave", () => {
-            // Reset the scale of the hovered image
             img.style.transform = "";
 
-            // Reset the scale of adjacent images
             if (index > 0) {
               arr[index - 1].classList.remove("adjacent-scale");
             }
