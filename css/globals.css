@@ -317,12 +317,7 @@ section.feels {
 }
 
 .feels-gallery .feels-image:hover {
-  transform: translateY(20px);
-}
-
-/* Class to add to adjacent images */
-.adjacent-scale {
-  transform: translateY(10px);
+  transform: translateY(-15px) scale(1.1);
 }
 
 .feels-gallery img {
