@@ -312,6 +312,19 @@ section.feels {
   margin: 80px 0 100px 0;
 }
 
+.feels-gallery .feels-image {
+  transition: transform 0.3s ease;
+}
+
+.feels-gallery .feels-image:hover {
+  transform: scale(1.1); /* Larger scale for the hovered image */
+}
+
+/* Class to add to adjacent images */
+.adjacent-scale {
+  transform: scale(1.05); /* Slightly smaller scale for adjacent images */
+}
+
 .feels-gallery img {
   width: 73px;
   height: 126px;
