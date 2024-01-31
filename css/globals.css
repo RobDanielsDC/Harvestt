@@ -32,7 +32,7 @@ body {
   background-image: url("../img/ForestSmallBG.jpeg");
   background-repeat: no-repeat;
   opacity: 0.8;
-  background-size: auto 882px;
+  background-size: cover;
 }
 
 .header::after {
@@ -42,7 +42,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 162px;
+  height: 250px;
   width: 100%;
   background-image: linear-gradient(to bottom, transparent, var(--dark-green));
 }
@@ -66,6 +66,10 @@ body {
   flex-wrap: nowrap;
   gap: 52px;
   margin-top: 62px;
+}
+
+#fly-container .firefly{
+  display: none;
 }
 
 .hero-logo {
@@ -304,7 +308,7 @@ article.iconCopy {
 
 article.feels .feels-gallery {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   margin: 0 -15vw;
 }
 
@@ -321,8 +325,7 @@ section.feels {
 }
 
 .feels-gallery img {
-  width: 73px;
-  height: 126px;
+  width: 90px;
   object-fit: cover;
   object-position: center;
   margin: 0;
@@ -482,11 +485,38 @@ article.desktop-iconCopy {
   }
   .desktop-logobar {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    justify-content: space-around;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 0 20px;
+  }
+
+  .desktop-logobarIcon {
+    width: 124px;
+    max-width: 200px;
+    aspect-ratio: auto;
+    flex: 1 3 auto;
+  }
+
+  .desktop-logobarStudio {
+    width: 469px;
+    min-width: 300px;
+    flex: 2 auto;
+  }
+
+  .desktop-logobarHarvestt {
+    width: 624px;
+    min-width: 400px;
+    flex: 2 auto;
+    align-self: center;
   }
   .header {
     padding: 30px 0;
+  }
+  #fly-container .firefly{
+    display: inline;
   }
   .banner {
     display: none;
@@ -528,7 +558,7 @@ article.desktop-iconCopy {
   }
 
   .hero-ctas {
-    margin-top: 170px;
+    margin-top: 30px;
   }
 
   .firefly {
@@ -544,7 +574,7 @@ article.desktop-iconCopy {
 
   .main-lift {
     position: relative;
-    margin-top: -10px;
+    margin-top: 280px;
     z-index: 3;
     padding: 20px;
   }
@@ -615,9 +645,16 @@ article.desktop-iconCopy {
   }
 
   article.feels .feels-gallery {
+    display: flex;
     gap: 40px;
-    justify-content: space-between;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feels-gallery img {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 400px;
   }
 
   section.feels {
