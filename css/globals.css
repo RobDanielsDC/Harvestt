@@ -189,9 +189,7 @@ body {
 
 .main-lift {
   position: relative;
-  margin-top: -65px;
   z-index: 3;
-  padding: 20px;
 }
 
 section.featured {
@@ -199,6 +197,7 @@ section.featured {
   display: flex;
   flex-direction: column;
   gap: 82px;
+  padding: 0 20px;
 }
 
 article.featured {
@@ -209,7 +208,7 @@ article.featured {
   color: var(--cream);
 }
 
-articlee.featured img {
+article.featured img {
   border-radius: 20px;
 }
 
@@ -309,12 +308,18 @@ article.iconCopy {
 
 article.feels .feels-gallery {
   display: flex;
+  flex-wrap: nowrap;
   gap: 30px;
-  margin: 0 -15vw;
+  margin: 0;
 }
 
 section.feels {
-  margin: 80px 0 100px 0;
+  margin: 80px 0 120px 0;
+  overflow-x: hidden;
+}
+
+article.feels > .feels-gallery:nth-of-type(1) {
+  flex-direction: row-reverse;
 }
 
 .feels-gallery .feels-image {
@@ -326,7 +331,7 @@ section.feels {
 }
 
 .feels-gallery img {
-  width: 90px;
+  width: 24vw;
   object-fit: cover;
   object-position: center;
   margin: 0;
@@ -341,7 +346,7 @@ section.feels {
   font-size: 38px;
   font-weight: 500;
   letter-spacing: -1.9px;
-  margin: 69px 0;
+  margin: 69px auto;
 }
 
 div.bottom-cta {
@@ -369,7 +374,7 @@ p.bottomcta {
 
 footer {
   position: relative;
-  padding-top: 280px;
+  padding: 280px 20px 0 20px;
   margin-top: -145px;
   margin-bottom: 25px;
   background-image: url("../img/bottomcta-bg.jpeg");
@@ -428,7 +433,7 @@ article.desktop-iconCopy {
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1124px) {
   .desktop-container {
     max-width: 1156px;
     margin: 0 auto;
@@ -645,6 +650,10 @@ article.desktop-iconCopy {
     transform: translateY(250px);
   }
 
+  article.feels > .feels-gallery:nth-of-type(1) {
+    flex-direction: row-reverse;
+  }
+
   article.feels .feels-gallery {
     display: flex;
     gap: 40px;
@@ -661,7 +670,12 @@ article.desktop-iconCopy {
   section.feels {
     margin-top: -140px;
     margin-bottom: 140px;
+    overflow-x: visible;
   }
+
+    article.feels > .feels-gallery:nth-of-type(1) {
+      flex-direction: row;
+    }
 
   footer {
     margin-top: 220px;
