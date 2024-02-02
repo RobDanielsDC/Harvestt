@@ -311,7 +311,9 @@
               class="feels-image"
             />
           </div>
-          <div class="feels-text">Focus on how it feels, not how it looks</div>
+          <div class="feels-text">Focus on how it feels, not how it looks
+            <a href="#" class="hero-button feels-button">Let's Chat</a>
+          </div>
 
           <div class="feels-gallery">
             <img
@@ -417,7 +419,7 @@
         src="img/mobileLogo.svg"
         alt="Harvestt Network Logo"
       />
-      <div class="desktop-logobar">
+      <div class="desktop-logobar bottom-logobar">
         <img
           src="img/desktopLogoHarvestt.svg"
           alt="Harvestt"
@@ -646,13 +648,13 @@
       };
 
       document.addEventListener("DOMContentLoaded", () => {
-        let numFireflies = 5;
-        if (window.innerWidth > 1024) {
-          for (let i = 0; i < 5; i++) {
+        let numFireflies = 7;
+
+          for (let i = 0; i < numFireflies; i++) {
             createFirefly();
           }
         }
-      });
+      );
 
       document.addEventListener("resize", () => {
         ScrollTrigger.refresh();

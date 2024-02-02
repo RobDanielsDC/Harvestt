@@ -68,8 +68,19 @@ body {
   margin-top: 62px;
 }
 
-#fly-container .firefly{
+/* #fly-container .firefly{
   display: none;
+} */
+
+.firefly {
+  position: absolute;
+  width: 2px;
+  height: 1px;
+  border-radius: 50%;
+  content: "";
+  background-color: var(--yellow);
+  box-shadow: 2px 2px 20px 5px var(--yellow);
+  opacity: 0.8;
 }
 
 .hero-logo {
@@ -339,6 +350,10 @@ article.feels > .feels-gallery:nth-of-type(1) {
 }
 
 .feels .feels-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   max-width: 353px;
   text-align: center;
   color: var(--cream);
@@ -347,6 +362,11 @@ article.feels > .feels-gallery:nth-of-type(1) {
   font-weight: 500;
   letter-spacing: -1.9px;
   margin: 69px auto;
+}
+
+.feels-button {
+  font-family: "Merriweather", serif;
+  letter-spacing: normal;
 }
 
 div.bottom-cta {
@@ -521,9 +541,6 @@ article.desktop-iconCopy {
   .header {
     padding: 30px 0;
   }
-  #fly-container .firefly{
-    display: inline;
-  }
   .banner {
     display: none;
   }
@@ -567,16 +584,6 @@ article.desktop-iconCopy {
     margin-top: 30px;
   }
 
-  .firefly {
-    position: absolute;
-    width: 2px;
-    height: 1px;
-    border-radius: 50%;
-    content: "";
-    background-color: var(--yellow);
-    box-shadow: 2px 2px 20px 5px var(--yellow);
-    opacity: 0.8;
-  }
 
   .main-lift {
     position: relative;
@@ -682,6 +689,10 @@ article.desktop-iconCopy {
     background-size: cover;
     padding-top: 100px;
     margin-bottom: 0;
+  }
+
+  .bottom-logobar {
+    max-width: 1456px;
   }
 
   footer .bottom-cta {
