@@ -154,11 +154,22 @@
         </div>
       </div>
       <div class="banner">
-        <span class="banner-text">Branding</span>
-        <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
-        <span class="banner-text">Web Design</span>
-        <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
-        <span class="banner-text">Marketing</span>
+        <div class="banner-marquee">
+          <span class="banner-text">Branding</span>
+          <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
+          <span class="banner-text">Web Design</span>
+          <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
+          <span class="banner-text">Marketing</span>
+          <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
+        </div>
+        <div class="banner-marquee">
+          <span class="banner-text">Branding</span>
+          <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
+          <span class="banner-text">Web Design</span>
+          <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
+          <span class="banner-text">Marketing</span>
+          <span class="banner-icon"><img src="img/bannerIcon.svg" /> </span>
+        </div>
       </div>
       <section id="fly-container" class="hero">
         <img
@@ -655,6 +666,12 @@
           }
         }
       );
+
+      const supportsOverflowClip = CSS.supports('overflow', 'clip');
+      if (!supportsOverflowClip) {
+        const banner = document.querySelector('.banner');
+        banner.style.overflowX = 'hidden';
+      }
 
       document.addEventListener("resize", () => {
         ScrollTrigger.refresh();

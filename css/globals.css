@@ -46,15 +46,46 @@ body {
   width: 100%;
   background-image: linear-gradient(to bottom, transparent, var(--dark-green));
 }
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
 .banner {
-  position: relative;
   display: flex;
+  flex-wrap: nowrap;
+  margin: 0 -20px;
+  overflow-x: clip;
+  white-space: nowrap;
+  align-items: center;
+  min-width: 100%;
   justify-content: space-between;
   color: var(--cream);
-  text-align: center;
   font-size: 15px;
   font-weight: 400;
+  gap: 0;
+}
+
+.banner-marquee {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  animation: slide-left 35s linear infinite;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  background: transparent;
+}
+
+.banner-text {
+  background: transparent;
+}
+.banner-text {
+  background: transparent;
 }
 
 .hero {
