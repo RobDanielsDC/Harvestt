@@ -490,6 +490,79 @@ article.desktop-iconCopy {
     margin: 0 auto;
   }
 
+  .cursor {
+    left: 0;
+    pointer-events: none;
+  }
+
+  .cursor {
+    height: 10px;
+    margin-left: -5px;
+    margin-top: -5px;
+    mix-blend-mode: difference;
+    opacity: 0;
+    position: absolute;
+    width: 10px;
+    z-index: 7;
+  }
+
+  .cursor:after {
+    background: white;
+    border-radius: 50%;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    mix-blend-mode: difference;
+    top: 0;
+    transition: transform 1s ease;
+    width: 100%;
+  }
+
+  .cursor--hover:after {
+    transform: scale(0);
+  }
+
+  .cursor__text {
+    color: white;
+    display: block;
+    font-size: 18px;
+    left: 50%;
+    overflow: hidden;
+    mix-blend-mode: difference;
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cursor__text__line {
+    transform: translateY(100%);
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .cursor--hover .cursor__text__line {
+    transform: translateY(0);
+  }
+
+  .cursor__circle {
+    border: 1px solid white;
+    border-radius: 100%;
+    background:rgba(255, 255, 255, 0.2);
+    height: 116px;
+    left: 50%;
+    position: absolute;
+    mix-blend-mode: difference;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+    width: 116px;
+  }
+
+  .cursor--hover .cursor__circle {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   .desktop-bannerbarText {
     font-family: Merriweather;
     flex-shrink: 0;
@@ -615,7 +688,6 @@ article.desktop-iconCopy {
     margin-top: 30px;
   }
 
-
   .main-lift {
     position: relative;
     margin-top: 280px;
@@ -641,6 +713,11 @@ article.desktop-iconCopy {
     max-width: 455px;
     transition: box-shadow 0.3s ease, background-color 0.3s ease,
       border-radius 0.3s ease;
+    cursor:none;
+  }
+
+  article.featured:hover {
+    cursor: none;
   }
 
   article.iconCopy {
@@ -673,7 +750,6 @@ article.desktop-iconCopy {
     box-shadow: 0 0 0 40px var(--featured-bg);
     background-color: var(--featured-bg);
     border-radius: 20px;
-    cursor: pointer;
   }
 
   section.featured article.featured:nth-child(3) {
@@ -711,9 +787,9 @@ article.desktop-iconCopy {
     overflow-x: visible;
   }
 
-    article.feels > .feels-gallery:nth-of-type(1) {
-      flex-direction: row;
-    }
+  article.feels > .feels-gallery:nth-of-type(1) {
+    flex-direction: row;
+  }
 
   footer {
     margin-top: 220px;
@@ -748,6 +824,7 @@ article.desktop-iconCopy {
     line-height: 100%;
     letter-spacing: -4.2px;
     margin: 112px auto;
+    gap: 40px;
   }
 
   article.feels .feels-gallery img {

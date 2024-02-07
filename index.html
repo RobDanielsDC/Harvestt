@@ -21,6 +21,12 @@
     />
   </head>
   <body>
+    <div id="cursor" class="cursor">
+      <div class="cursor__circle"></div>
+      <div class="cursor__text">
+        <div class="cursor__text__line">View</div>
+      </div>
+    </div>
     <header class="header">
       <div class="desktop-logobar">
         <img
@@ -659,11 +665,31 @@
       };
 
       document.addEventListener("DOMContentLoaded", () => {
-        let numFireflies = 7;
+          let numFireflies = 7;
 
           for (let i = 0; i < numFireflies; i++) {
             createFirefly();
           }
+
+          const cursor = document.getElementById("cursor");
+
+          document.querySelectorAll('article.featured').forEach((article) => {
+            article.addEventListener('mouseenter', () => {
+              cursor.classList.add('cursor--hover');
+              cursor.style.opacity = 1;
+            });
+            article.addEventListener('mouseleave', () => {
+              cursor.classList.remove('cursor--hover');
+              cursor.style.opacity = 0;
+            });
+            article.addEventListener('mousemove', (e) => {
+              const rect = article.getBoundingClientRect();
+              console.log(rect);
+              const xPos = e.pageX;
+              const yPos = e.pageY;
+              cursor.style.transform = `translate(${xPos}px, ${yPos}px)`;
+            })
+          });
         }
       );
 
